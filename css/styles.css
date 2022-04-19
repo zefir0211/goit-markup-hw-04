@@ -111,16 +111,43 @@ a {
     color: var(--item-text-color);
 }
 
-.header-mail {
-    margin-right: 50px;
+.header-mail-icon {
+    fill: var(--item-text-color);
+    margin-right: 10px;
 }
 
+
+.header-mail {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.header-tel {
+    display: flex;
+    align-items: center;
+}
+
+.header-mail-icon {
+    fill: var(--item-text-color);
+    margin-right: 10px;
+}
 .active-link>a:hover, .active-link>a:focus{
     color: var(--active-text-color);
 }
 
+.active-link>a:hover .header-mail-icon, 
+.active-link>a:focus .header-mail-icon,
+.active-link>a:focus .header-tel-icon,
+.active-link>a:focus .header-tel-icon {
+    fill: var(--active-text-color);
+}
+
+
+
 .active-link {
     margin-left: auto;
+    display: flex;
 }
 
 /* Main index */
@@ -133,12 +160,21 @@ a {
  }
 
 .main-text{
+    max-width: 1600px;
     height: 600px;
     margin: auto;
     display: flex;
     flex-direction: column;
 
-    background: var(--background);
+    background: #C4C4C4;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/main-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-heading {
@@ -202,6 +238,16 @@ a {
 
 .main-item:last-child {
     margin: 0;
+}
+
+.content-icon {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;   
+    margin-bottom: 30px;
+    background: var(--background-color-team);
+    border-radius: 4px;
 }
 
 .main-item-heading {
@@ -284,7 +330,6 @@ ul.main-img li {
 .main-team-item {
     margin-right: 30px;
     width: 270px;
-    height: 368px;
 
     text-align: center;
 
@@ -318,6 +363,80 @@ ul.main-img li {
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--item-text-color);
+
+    margin-bottom: 16px;
+}
+
+.team-social-links{
+    display: flex;
+    justify-content: center;
+}
+.social-links-item + .social-links-item{
+    margin-left: 10px;
+}
+.social-links {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.social-links-icon{
+    fill: #AFB1B8;
+}
+
+.social-links:hover {
+    background-color: var(--active-text-color);
+}
+
+.social-links:hover .social-links-icon {
+    fill: var(--white-text-color);
+}
+
+/* clients */
+
+.main-clients {
+    padding: 94px 0px;
+}
+
+.main-clients-heading {
+    margin-bottom: 50px;
+}
+
+.main-clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.main-clients-item +.main-clients-item {
+    margin-left: 30px;
+}
+
+.main-clients-link {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-clients-icon {
+    fill: #AFB1B8;
+}
+
+.main-clients-link:hover,.main-clients-link:focus {
+    border: 1px solid var(--active-text-color);
+}
+
+.main-clients-link:hover .main-clients-icon,
+.main-clients-link:focus .main-clients-icon {
+    fill: var(--active-text-color);
 }
 
 /* Footer index */
@@ -327,6 +446,14 @@ ul.main-img li {
     padding-bottom: 60px;
     margin: auto;
     background: var(--background);
+}
+
+.footer-info {
+    margin-right: 70px;
+}
+
+.footer-logo-mar {
+    margin: 0;
 }
 
 .footer-logo-item {
@@ -359,6 +486,34 @@ ul.main-img li {
 .footer-tel-text:hover, .footer-tel-text:focus {
     color: var(--active-text-color);
 } 
+
+.footer>.container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-social-links {
+}
+
+.footer-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.footer-social-link {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.footer-color-icon {
+    fill: var(--white-text-color);
+}
 
 /*-----------------Portfolio section-----------------*/
 
