@@ -564,7 +564,7 @@ ul.main-img li {
     background: var(--active-text-color);
 }
 
-.portfolio-text-btn:hover, .portfolio-text-btn:focus {
+.portfolio-btn:hover .portfolio-text-btn, .portfolio-btn:focus .portfolio-text-btn {
     color: var(--white-text-color);
 }
 
