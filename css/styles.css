@@ -331,6 +331,7 @@ ul.main-img li {
 .main-team-item {
     margin-right: 30px;
     width: 270px;
+    background-color: var(--white-text-color);
 
     text-align: center;
 
@@ -372,6 +373,7 @@ ul.main-img li {
     display: flex;
     justify-content: center;
 }
+
 .social-links-item + .social-links-item{
     margin-left: 10px;
 }
@@ -384,8 +386,8 @@ ul.main-img li {
     align-items: center;
     cursor: pointer;
 }
+
 .social-links-icon{
-    content: '';
     fill: #AFB1B8;
 }
 
